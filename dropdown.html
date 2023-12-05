@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style>
+        /* styles.css */
+    .navigation {
+        background-color: #333;
+        color: #fff;
+        height: 60px;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .dropbox-button {
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="dropbox-button" id="dropbox-button">
+            <!-- You can use an icon or text here -->
+            Categories
+            <!-- <img src="dropbox-icon.png" alt="Dropbox"> -->
+        </div>
+        <ul class="dropdown" id="dropdown">
+            <li class="nav-item dropdown dropDown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#WD">Web Development</a>
+                    <a class="dropdown-item" href="#Net">Networking</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#Bank">Banking & Finince</a>
+                    <a class="dropdown-item" href="#Mkt">Marketing</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script >
+    // script.js
+    const dropboxButton = document.getElementById('dropbox-button');
+    const navigation = document.querySelector('.navigation');
+
+    let isLarge = true;
+
+    dropboxButton.addEventListener('click', () => {
+        if (isLarge) {
+            navigation.style.height = '40px'; // Set the small size
+        } else {
+            navigation.style.height = '60px'; // Set the large size
+        }
+        isLarge = !isLarge;
+    });
+    </script>
+</body>
+</html>

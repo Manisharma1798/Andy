@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Andy.com</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><a href="shopping.html"><img src="logo.png" class="logo" alt="logo" width="5%"></a>Andy.com</h1>
+    </header>
+    <nav>
+        <div class="header">
+            <ul style="text-align: right;">
+                <li><a href="shopping.html"><strong>Home</strong></a></li>
+                <li><a href="Categories.html"><strong>Categories</strong></a></li>
+                <li><a href="Contact Us.html"><strong>Contact Us</strong></a></li>
+                <li><a href="LogIn Page.html"><strong>Sign In/Sign Up</strong></a></li>
+                <abbr title="Search for Products"><li><input type="text" placeholder="Search for products..."><button type="button" style="width:3%;"><img src="search.png" alt="Search" width="100%"></button></li></abbr>
+                <abbr title="Wishlist"><li><a href="Wishlist.html"><img src="Wishlist logo.png" alt="Wishlist" width="2%"></a></li></abbr>
+                <abbr title="Cart"><li><a href="cart.html"><img src="cart.png" width="2%"></a></li></abbr>
+            </ul>
+        </div>
+    </nav><br>  
+
+        <section id="banner">
+            <h2>Welcome to our store</h2>
+            <p> Shop the latest trends at affordable prices</p>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <!-- Add your slides here -->
+                    <div class="carousel-slide">
+                        <video alt="Slide 1" width="80%" height="500px" autoplay><source src="Banner4.mp4"></video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video alt="Slide 1" width="80%" height="500px" autoplay><source src="Banner5.mp4"></video>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Banner3.png" alt="Slide 3" width="80%">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Banner1.jpg" alt="Slide 1" width="80%">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Banner2.png" alt="Slide 2" width="80%">
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+            
+                <!-- Optional navigation arrows -->
+                <div class="carousel-arrow prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-arrow next" onclick="nextSlide()">&#10095;</div>
+            </div>
+        </section>
+        <h2>Featured Product</h2><br>
+        <section id="products">
+            <div class="product">
+                <img src="img.jpg" alt="Product 1" width="20%">
+                <h3>Lighter Man</h3>   
+                <p>₹1599</p>
+                <a href="cart.html"><button onclick="AddToCart('Lighter Man', 1599)" type="button">Add to Cart</button></a>
+            </div>
+            <div class="product">
+                <img src="punisher.jpg" alt="Product 2" width="20%" height="40%" >
+                <h3>Punisher</h3>
+                <p>₹2999</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div>
+            <div class="product">
+                <img src="we.webp" alt="Product 3" width="20%">
+                <h3>Wallpaper</h3>
+                <p>₹1999</p>
+                <a href="cart.html"><button onclick="AddToCart('Wallpaper', 1999)" type="button">Add to Cart</button></a>
+            </div>  
+            <div class="product">
+                <img src="headphone.jpg" alt="Product 4" width="20%">
+                <h3>Headphone</h3>
+                <p>₹1199</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div>
+            <div class="product">
+                <img src="clothes.avif" alt="Product 5" width="20%">
+                <h3>Clothes</h3>
+                <p>₹1229</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div>  
+            <div class="product">
+                <img src="Glasses.jpg" alt="Product 6" width="20%">
+                <h3>Glasses</h3>
+                <p>₹1599</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div>
+            <div class="product">
+                <img src="Iwatch.jpg" alt="Product 7" width="20%">
+                <h3>i Watch</h3>
+                <p>₹25999</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div> 
+            <div class="product">
+                <img src="L headphone.jpg" alt="Product 5" width="20%">
+                <h3>L Headphone</h3>
+                <p>₹9999</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div>
+            <div class="product">
+                <img src="Shoe.jpg" alt="Product 5" width="20%">
+                <h3>Shoe</h3>
+                <p>₹4599</p>
+                <a href="cart.html"><button onclick="AddToCart('Punisher', 2999)" type="button">Add to Cart</button></a>
+            </div>      
+            <!-- Add more product divs as needed-->
+        </section>
+        <footer>
+            <p>&copy; 2023 My Shopping Website. All rights reserved</p>
+        </footer>
+        <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Your Cart</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="logo.png" alt="logo" width="5%">Andy.com</h1>
+    </header>
+    <nav>
+        <div class="header">
+            <ul>
+                <li><a href="shopping.html"><strong>Home</strong></a></li>
+            
+                <li class="dropdown">
+                <a href="#"><strong>Categories</strong></a>
+                <ul class="dropdown-content">   
+                    <li><a href="Electronics.html">Electronics</a></li>
+                    <li><a href="#">TVs & Appliances</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">women</a></li>
+                    <li><a href="#">Baby & Kids</a></li>
+                    <li><a href="#">Home & Furniture</a></li>
+                    <li><a href="#">Sports, Books & Mores</a></li>
+                    <li><a href="#">Flights </a></li>
+                    <li><a href="#">Offer Zone</a></li>
+             </ul>
+            </li>
+                
+                <li><a href="Contact Us.html"><strong>Contact Us</strong></a></li>
+                <li><a href="LogIn Page.html"><strong>Sign In/Sign Up</strong></a></li>
+                <li><abbr title="Search for Products"><input type="text" placeholder="Search for products..."><button type="button" style="width:3%;"><img src="search.png" alt="Search" width="100%"></button></li></abbr>
+                <li></li><abbr title="Wishlist"><a href="Wishlist.html"><img src="Wishlist logo.png" alt="Wishlist" width="2%"></a></li></abbr>
+                <li></li><abbr title="Cart"><a href="cart.html"><img src="cart.png" width="2%"></a></li></abbr>
+                    
+                
+            </ul>
+        </div>
+    </nav>
+            <h1>Your Cart</h1>
+    
+    <main>
+        <div class="cart-container">
+            <div class="cart-item">
+                <img src="img.jpg" height="10%" width="10%" alt="Product Image">
+                <div class="item-details">
+                    <h2>Lighter Man</h2>
+                    <p>Price: $199.99</p>
+                    <form id="numberForm">
+                        <label for="number">Quantity:</label>
+                        <input type="text" id="number" name="number" min="0" value="0"  readonly><br>
+                        <input  type="button"  value="+" onclick="increaseNumber()">
+                        <input type="button" value="-" onclick="decreaseNumber()">
+                    </form>
+                
+                    <script>
+                        function increaseNumber() {
+                            var numberField = document.getElementById('number');
+                            var currentvalue = parseInt(numberField.value) ;
+                            numberField.value = currentvalue + 1;
+                        }
+                
+                        function decreaseNumber() {
+                            var numberField = document.getElementById('number');
+                            var currentvalue = parseInt(numberField.value) ;
+                            if (currentvalue > 0){
+                                numberField.value  = currentvalue - 1;
+                            }
+                            
+                        }
+                    </script>
+                </div>
+                <div class="item-actions">
+                    <button  class="remove-button" style="width: 100%; height: 30%;">Remove</button>
+                </div>
+            </div>
+            <!-- Additional cart items go here -->
+        </div>
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <p>Total Items: 1</p>
+            <p>Total Price: $199.99</p>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Shopping Website. All rights reserved</p>
+    </footer>
+</body>
+</html>
